@@ -1,4 +1,5 @@
 .gallery {
+  margin: 5px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   grid-auto-rows: 240px;
@@ -10,4 +11,20 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 8px;
+  box-shadow: inset 0 0 15px black, 0 0 0 black;
+  transition: all 0.3s ease-in-out;
+}
+
+.image:hover {
+  box-shadow: inset 0 0 0 black, 0 8px 15px black;
+}
+
+.image:nth-child(6n) {
+  grid-column: span 2;
+  grid-row: span 2
+}
+
+.image:nth-child(2n) {
+  grid-row: span 2
 }
